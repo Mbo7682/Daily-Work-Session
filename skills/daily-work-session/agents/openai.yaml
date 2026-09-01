@@ -1,0 +1,7 @@
+interface:
+  display_name: "Daily Work Session"
+  short_description: "Run Michael's cross-service work triage"
+  default_prompt: "Use $daily-work-session to start my read-only daily work triage and present the first meaningful item."
+policy:
+  allow_implicit_invocation: true
+
