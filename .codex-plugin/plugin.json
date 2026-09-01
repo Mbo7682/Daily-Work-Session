@@ -1,0 +1,37 @@
+{
+  "name": "daily-work-session",
+  "version": "0.1.0",
+  "description": "Runs a safe daily decision queue across Outlook, Teams, and Jira.",
+  "author": {
+    "name": "Michael Bruun Østergaard",
+    "url": "https://github.com/Mbo7682"
+  },
+  "homepage": "https://github.com/Mbo7682/Daily-Work-Session",
+  "repository": "https://github.com/Mbo7682/Daily-Work-Session",
+  "keywords": [
+    "daily-triage",
+    "outlook",
+    "teams",
+    "jira",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Daily Work Session",
+    "shortDescription": "Triage Outlook, Teams, and Jira safely.",
+    "longDescription": "Creates a read-only morning priority queue across Outlook, Teams, and Jira, then maintains the chat as an item-by-item work session with guarded actions and verified Inbox cleanup.",
+    "developerName": "Michael Bruun Østergaard",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Start my daily work triage.",
+      "Refresh the queue and show the next item.",
+      "Houseclean my Inbox safely."
+    ]
+  }
+}
+
