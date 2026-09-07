@@ -29,7 +29,10 @@ ORDER BY updated DESC
 
 If the API returns old issues because they have an ancient due date, rank by actual current relevance and report the stale backlog separately only when it needs cleanup.
 
+## Browser authentication
+
+When a Jira action requires browser automation, try Microsoft sign-in first using Michael's Microsoft work account. Continue without interrupting Michael when the existing Microsoft session completes authentication. Ask Michael only if Microsoft sign-in is unavailable, fails, or requires interactive authentication that cannot be completed automatically.
+
 ## Presentation
 
 Include issue key, summary, status, assignee, due date, last meaningful update, and a direct Jira link. Explain the decision or next action; do not merely repeat Jira's status.
-
