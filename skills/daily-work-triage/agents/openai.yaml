@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily Work Triage"
+  short_description: "Launch the latest Daily Work Session"
+  default_prompt: "Use $daily-work-triage to load the current main branch of Mbo7682/Daily-Work-Session and start today's work session."
+policy:
+  allow_implicit_invocation: true
