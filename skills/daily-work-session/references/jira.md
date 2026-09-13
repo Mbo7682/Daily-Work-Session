@@ -1,8 +1,16 @@
-# Jira triage
+# Contextual Jira lookup
 
 ## Scope
 
-Resolve the authenticated Jira user and review open work that is:
+During normal daily triage, do not run a standalone Jira backlog pass. Query Jira only when a surfaced Teams or Outlook item:
+
+- names an issue key, project, sprint, epic, or board;
+- refers to a commitment that is managed in Jira;
+- requires current Jira status, ownership, due date, or recent updates to make a decision.
+
+Fetch only the context needed for that item, then return to the Teams or Outlook queue.
+
+If Michael explicitly requests a Jira review, resolve the authenticated Jira user and review open work that is:
 
 - assigned to Michael and overdue;
 - assigned to Michael and recently updated;
@@ -31,7 +39,9 @@ If the API returns old issues because they have an ancient due date, rank by act
 
 ## Browser authentication
 
-When a Jira action requires browser automation, try Microsoft sign-in first using Michael's Microsoft work account. Continue without interrupting Michael when the existing Microsoft session completes authentication. Ask Michael only if Microsoft sign-in is unavailable, fails, or requires interactive authentication that cannot be completed automatically.
+Use the connected Jira or Atlassian integration first. If it is disconnected or expired, follow [authentication.md](authentication.md).
+
+Use browser authentication only when Michael explicitly asks to use the Jira site or when the approved connector flow opens it. Reuse an existing Microsoft work session when Jira offers Microsoft sign-in. If interactive sign-in is required, pause for Michael to complete it in the provider-owned page.
 
 ## Presentation
 

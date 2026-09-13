@@ -1,7 +1,6 @@
 interface:
   display_name: "Daily Work Session"
-  short_description: "Run Michael's cross-service work triage"
-  default_prompt: "Use $daily-work-session to start my read-only daily work triage and present the first meaningful item."
+  short_description: "Clean, triage, and recap the workday"
+  default_prompt: "Use $daily-work-session to schedule today's memory recap, clean confirmed Inbox noise, then triage Teams before email with Jira checked only as needed."
 policy:
   allow_implicit_invocation: true
-

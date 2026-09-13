@@ -1,7 +1,7 @@
 {
   "name": "daily-work-session",
-  "version": "0.1.0",
-  "description": "Runs a safe daily decision queue across Outlook, Teams, and Jira.",
+  "version": "0.2.0",
+  "description": "Cleans Outlook noise, runs Teams-first triage, and schedules a same-chat memory recap.",
   "author": {
     "name": "Michael Bruun Østergaard",
     "url": "https://github.com/Mbo7682"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Daily Work Session",
-    "shortDescription": "Triage Outlook, Teams, and Jira safely.",
-    "longDescription": "Creates a read-only morning priority queue across Outlook, Teams, and Jira, then maintains the chat as an item-by-item work session with guarded actions and verified Inbox cleanup.",
+    "shortDescription": "Clean, triage, and recap the workday.",
+    "longDescription": "Schedules a same-chat 21:30 memory recap, removes confirmed Outlook Inbox noise, then works through Teams before email. Jira is checked only when a surfaced item needs current context.",
     "developerName": "Michael Bruun Østergaard",
     "category": "Productivity",
     "capabilities": [
@@ -34,4 +34,3 @@
     ]
   }
 }
-
