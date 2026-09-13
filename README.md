@@ -10,25 +10,30 @@ The plugin starts each day by scheduling a 21:30 Europe/Copenhagen memory recap 
 .
 |-- .codex-plugin/plugin.json
 |-- AGENTS.md
-`-- skills/daily-work-session/
-    |-- SKILL.md
-    |-- agents/openai.yaml
-    `-- references/
-        |-- automation.md
-        |-- authentication.md
-        |-- connectors.md
-        |-- housecleaning.md
-        |-- interaction.md
-        |-- jira.md
-        |-- memory.md
-        |-- outlook.md
-        `-- teams.md
+`-- skills/
+    |-- daily-work-session/
+    |   |-- SKILL.md
+    |   |-- agents/openai.yaml
+    |   `-- references/
+    |       |-- automation.md
+    |       |-- authentication.md
+    |       |-- connectors.md
+    |       |-- housecleaning.md
+    |       |-- interaction.md
+    |       |-- jira.md
+    |       |-- memory.md
+    |       |-- outlook.md
+    |       `-- teams.md
+    `-- daily-work-triage/
+        |-- SKILL.md
+        `-- agents/openai.yaml
 ```
 
 ## Design
 
 - **Plugin:** packages the workflow for installation and discovery.
 - **Skill:** routes recap scheduling, startup cleanup, Teams-first triage, email review, contextual Jira lookup, refreshes, and item actions.
+- **Compatibility launcher:** `$daily-work-triage` resolves the latest `main` commit, loads the workflow from that immutable revision, and starts the session. Existing chats stay pinned to the revision they started with.
 - **Rules:** `AGENTS.md` and the skill invariants protect live communication and data.
 - **References:** source-specific procedures are loaded only when needed.
 - **Connectors:** Outlook, Teams, Jira, GitHub, and Automations are capabilities, not embedded credentials. Failed integrations use provider reconnection, device login, or secure runtime configuration.
